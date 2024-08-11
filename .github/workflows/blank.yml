@@ -1,0 +1,40 @@
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger the workflow on pull request to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.7'  # Specify the Ruby version
+
+    - name: Install dependencies
+      run: bundle install
+      working-directory: ./docs  # Set the working directory to the docs folder
+
+    - name: Build Jekyll site
+      uses: actions/jekyll-build-pages@v1.0.12
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        JEKYLL_SOURCE: ./docs  # Tell Jekyll to use the docs directory as the source
+        JEKYLL_ENV: production
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3.8.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/_site  # Deploy the built site from the docs/_site directory
