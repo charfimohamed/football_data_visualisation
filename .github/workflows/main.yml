@@ -1,11 +1,14 @@
 name: Build Jekyll site
+
 on:
- push:
-   branches: ["main"]
+  push:
+    branches: ["main"]
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,8 +19,13 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build
         uses: actions/jekyll-build-pages@v1
+        with:
+          jekyll_source: './docs'  # Specify the docs folder as the source
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs/_site'  # Specify the path to the built site
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
