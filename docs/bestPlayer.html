@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<input type="checkbox" id="checkbox">
+<header class="header">
+	<h2 class="u-name">
+		<span class="before-element"></span> <!-- Pseudo-element target -->
+		<label for="checkbox">
+			<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+		</label>
+		Football <b> Dashboard</b>
+	</h2>
+</header>
+	<div class="body">
+		<nav class="side-bar">
+
+			<ul>
+				<li>
+					<a href="index.html">
+						<i class="fa fa-desktop" aria-hidden="true"></i>
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="searchPlayer.html">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<span>Compare Players</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="searchTeam.html">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<span>Compare Teams</span>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="bestTeam.html">
+						<i class="fa fa-group" aria-hidden="true"></i>
+						<span>Best Team</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="bestPlayer.html">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<span>Best Players</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="contact.html">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<span>Contact</span>
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+		<section class="section-1">
+			<h3 style="margin-bottom: 5px;"> Players in real-life numbers </h3>
+			<p>
+				This visualisation shows the number of goals, the market value and the weekly wage of the top players. Don't hesitate to change <br>
+				the filter and hover over each player to see the exact number of goals, market value and weekly wage!  </p>
+			<div class="graph-container">
+				<div class="graph">
+					<iframe src="goalscorerBarChart.html" class="goalscorerBarChart.html" style="width: 1000px; height: 750px; border: none; margin-bottom: 20px; margin-left: 20px; top: 800%"></iframe>
+				</div>
+			</div>
+			<h3 style="margin-bottom: 5px;"> Club's biggest goalscorers   </h3> <br> <br>
+			<p> Step into the realm of football greatness with this interactive pie chart, your window to discovering the top goalscorers  <br>
+				for every club. Navigate effortlessly through different leagues using intuitive filter dropdowns, each selection revealing  <br>
+				a new layer of scoring prowess. From the Premier League to Serie A, explore the dynamic landscape of football talent.  <br>
+				Behind the scenes, a robust backend ensures smooth data flow, delivering real-time insights. Witness the pie chart come alive,  <br>
+				with each slice representing a club's leading goalscorer. Engage with the competitive spirit of football as you uncover  <br>
+				the names that light up the scoreboard. <br> </p>
+
+			<div class="graph-container">
+				<div class="graph">
+					<iframe src="pieChart.html" class="pieChart.html" style="width: 1100px; height: 700px; border: none; margin-bottom: 20px; margin-left: 20px; top: 800%"></iframe>
+				</div>
+			</div>
+			<h3 style="margin-bottom: 5px;"> Shots per goal metric   </h3> <br> <br>
+			<p> This chart showcases the goals and shots taken by each player, to show how effective a player is in front of the box. <br> </p>
+
+			<div class="graph-container">
+				<div class="graph">
+					<iframe src="shotsXgoals.html" class="shotsXgoals.html" style="width: 900px; height: 500px; border: none; margin-bottom: 10px; margin-left: 20px; top: 400%"></iframe>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

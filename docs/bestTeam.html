@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<input type="checkbox" id="checkbox">
+<header class="header">
+	<h2 class="u-name">
+		<span class="before-element"></span> <!-- Pseudo-element target -->
+		<label for="checkbox">
+			<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+		</label>
+		Football <b> Dashboard</b>
+	</h2>
+</header>
+<div class="body">
+	<nav class="side-bar">
+
+		<ul>
+			<li>
+				<a href="index.html">
+					<i class="fa fa-desktop" aria-hidden="true"></i>
+					<span>Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="searchPlayer.html">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<span>Compare Players</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="searchTeam.html">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<span>Compare Teams</span>
+				</a>
+			</li>
+
+
+			<li>
+				<a href="bestTeam.html">
+					<i class="fa fa-group" aria-hidden="true"></i>
+					<span>Best Team</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="bestPlayer.html">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<span>Best Players</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="contact.html">
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					<span>Contact</span>
+				</a>
+			</li>
+
+		</ul>
+	</nav>
+	<section class="section-1">
+		<h1>Best teams</h1>
+		<p style="margin-bottom: 10px;">In this interactive visualisation we present to you the team of the season per league. <br> </br> Don't hesitate to select the league to see the best team of that league !</p>
+
+		<div class="graph">
+			<iframe src="bestTeamVizRaw.html" class="bestTeamVizRaw.html" style="width: 1000px; height: 800px; border: none; margin-bottom: 20px; top: 800%"></iframe>
+		</div>
+	</section>
+</div>
+
+</body>
+</html>
