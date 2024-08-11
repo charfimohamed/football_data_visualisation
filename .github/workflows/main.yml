@@ -1,4 +1,4 @@
-name: Build Jekyll site
+name: Deploy Static Site
 
 on:
   push:
@@ -15,16 +15,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build
-        uses: actions/jekyll-build-pages@v1
-        with:
-          jekyll_source: './docs'  # Specify the docs folder as the source
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs/_site'  # Specify the path to the built site
+          path: 'docs'  # Upload all files from the docs folder
 
   deploy:
     runs-on: ubuntu-latest
